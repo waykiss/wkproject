@@ -41,7 +41,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Test backend - Go
-        run:
+        run: |
           cd backend
           go test -v ./...
 
