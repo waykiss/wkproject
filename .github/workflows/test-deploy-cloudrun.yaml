@@ -5,8 +5,7 @@ on:
 
 env:
   SERVICE_NAME: crud-sample
-  PROJECT_ID: codetips
-  CLOUD_SQL_INSTANCE_NAME_TEST: codetips:us-central1:test
+  PROJECT_ID: codetips-358318
 
 jobs:
   test_and_build:
