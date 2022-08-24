@@ -10,11 +10,11 @@ func getRoutes() *[]rest.RouteGroup {
 	return &[]rest.RouteGroup{
 		{
 			Prefix: "users", Routers: []rest.Route{
-				{Method: http.MethodGet, Path: "/", Handler: list},
-				{Method: http.MethodPost, Path: "/register", Handler: register},
-				{Method: http.MethodPost, Path: "/login", Handler: login},
-				{Method: http.MethodDelete, Path: "/", Handler: deleteUser},
-			},
+			{Method: http.MethodGet, Path: "/", Handler: list},
+			{Method: http.MethodPost, Path: "/register", Handler: register},
+			{Method: http.MethodPost, Path: "/login", Handler: login},
+			{Method: http.MethodDelete, Path: "/", Handler: deleteUser},
+		},
 		},
 	}
 }
@@ -29,6 +29,7 @@ func validateTokenMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if isPublicRouter(r.Method, r.RequestURI) {
 			next.ServeHTTP(w, r)
+			return
 		}
 		token := r.Header.Get("token")
 		err := validateToken(token)

@@ -85,6 +85,7 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
           CLOUD_SQL_INSTANCE_NAME_TEST: ${{ secrets.CLOUD_SQL_INSTANCE_NAME_TEST }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
@@ -99,6 +100,7 @@ jobs:
             --set-env-vars DB_HOST=$DB_HOST \
             --set-env-vars DB_USER=$DB_USER \
             --set-env-vars DB_PASSWORD=$DB_PASSWORD \
+            --set-env-vars DB_NAME=$DB_NAME \
             --set-env-vars DB_PORT=$DB_PORT \
             --set-env-vars JWT_SECRET=$JWT_SECRET \
             --platform managed \
