@@ -15,22 +15,13 @@ type Query struct {
 	Email string
 }
 
-type LoginSource string
-type LicencaSituacao string
-
-func (m LicencaSituacao) String() string {
-	return string(m)
-}
-
-// variavel para guardar as rotas publicas
+// variables to store public and private routers
 var publicRouters = map[string]string{}
 var adminRouters = map[string]string{}
 
 const (
-	StatusActive      Status      = "active"
-	StatusUnconfirmed Status      = "unconfirmed"
-	LoginSourceWeb    LoginSource = "web"
-	LoginSourceMobile LoginSource = "mobile"
+	StatusActive      Status = "active"
+	StatusUnconfirmed Status = "unconfirmed"
 )
 
 //StatusAll variable with all the status converted into string
