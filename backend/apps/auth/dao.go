@@ -2,7 +2,7 @@ package auth
 
 import (
 	"fmt"
-	"goapp/comps/database"
+	"github.com/rodrigorodriguescosta/goapp/comps/database"
 	"log"
 	"os"
 )

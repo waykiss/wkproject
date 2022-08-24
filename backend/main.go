@@ -2,9 +2,10 @@ package main
 
 import (
 	"crud-sample/apps/auth"
-	"goapp"
-	//"goapp/adapters/grpc"
-	"goapp/adapters/rest/fiber"
+	"github.com/rodrigorodriguescosta/goapp"
+
+	//"github.com/rodrigorodriguescosta/goapp/adapters/grpc"
+	"github.com/rodrigorodriguescosta/goapp/adapters/rest/fiber"
 )
 
 func main() {

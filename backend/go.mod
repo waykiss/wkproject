@@ -4,13 +4,11 @@ go 1.18
 
 replace crud-sample v0.0.0 => ./
 
-replace goapp v0.0.1 => ../../goapp
-
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/rodrigorodriguescosta/goapp v0.0.0-20220824024346-76eebec52778
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.0
-	goapp v0.0.1
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
 	golang.org/x/text v0.3.7
 	google.golang.org/grpc v1.48.0

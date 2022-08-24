@@ -2,8 +2,8 @@ package auth
 
 import (
 	"fmt"
+	"github.com/rodrigorodriguescosta/goapp/comps/str"
 	log "github.com/sirupsen/logrus"
-	"goapp/comps/str"
 	"os"
 	"time"
 

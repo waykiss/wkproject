@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"goapp/adapters/rest"
+	"github.com/rodrigorodriguescosta/goapp/adapters/rest"
 	"net/http"
 )
 
