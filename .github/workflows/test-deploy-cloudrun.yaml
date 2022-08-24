@@ -73,7 +73,9 @@ jobs:
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
           CLOUD_SQL_INSTANCE_NAME_TEST: ${{ secrets.CLOUD_SQL_INSTANCE_NAME_TEST }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
           gcloud run deploy $SERVICE_NAME  \
             --image gcr.io/$PROJECT_ID/$SERVICE_NAME \
