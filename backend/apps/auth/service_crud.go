@@ -61,7 +61,14 @@ func (s *Service) Create(m *Model) (err error) {
 	if err = validate(m); err != nil {
 		return
 	}
-
+	userDb, err := s.dao.FindByEmail(m.Email)
+	if err != nil {
+		return
+	}
+	if userDb.Id != "" {
+		err = fmt.Errorf("user with email %s already exists", m.Email)
+		return
+	}
 	//Create using DAO
 	err = s.dao.Create(*m)
 	return
