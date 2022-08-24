@@ -20,7 +20,7 @@ func AddPublicRouter(method, route string) {
 	publicRouters[method] += " " + route
 }
 
-//AddAdminRouter check if the router is an admin route
+//AddAdminRouter add admin router
 func AddAdminRouter(method, route string) {
 	adminRouters[method] += " " + route
 }
