@@ -34,7 +34,6 @@ func (s *Service) register(name, email, password string, age uint) (err error) {
 	if err != nil {
 		return
 	}
-	go sendConfirmationEmail(u)
 	return
 }
 
@@ -184,17 +183,4 @@ func hashPassword(pwd string) string {
 	// GenerateFromPassword returns a byte slice so we need to
 	// convert the bytes to a string and return it
 	return string(hash)
-}
-
-//sendConfirmationEmail send a confirmation email to the user registration
-func sendConfirmationEmail(u Model) {
-	//mail := mailer.NewMail()
-	//mail.Subject = i18n(s.AppContext.Language, registrationEmailConfirmationSubject)
-	//mail.From = mailer.NewMailAddress(app.AppConfig.ApplicationName, emailSenderEmail)
-	//mail.Message = i18n(s.AppContext.Language, registrationEmailConfirmationBody, u.Name, app.AppConfig.ApplicationName, u.ConfirmationCode)
-	//mail.AddRecipient(u.Name, u.Email)
-	//err := mail.Send()
-	//if err != nil {
-	//	app.Error(err, s.AppContext)
-	//}
 }
