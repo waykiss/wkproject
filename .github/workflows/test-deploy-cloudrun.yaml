@@ -42,6 +42,7 @@ jobs:
 
       - name: Test backend - Go
         run:
+          cd backend
           go test -v ./...
 
       - name: Build backend
