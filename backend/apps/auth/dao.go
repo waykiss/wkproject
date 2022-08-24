@@ -32,6 +32,7 @@ func GetDb() (r *database.Database) {
 		if err != nil {
 			log.Fatal("database connection error")
 		}
+		err = db.Migrate(&Model{})
 	}
 	r = db
 	return
