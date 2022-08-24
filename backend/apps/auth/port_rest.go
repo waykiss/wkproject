@@ -10,11 +10,11 @@ func getRoutes() *[]rest.RouteGroup {
 	return &[]rest.RouteGroup{
 		{
 			Prefix: "users", Routers: []rest.Route{
-			{Method: http.MethodGet, Path: "/", Handler: list},
-			{Method: http.MethodPost, Path: "/register", Handler: register},
-			{Method: http.MethodPost, Path: "/login", Handler: login},
-			{Method: http.MethodDelete, Path: "/", Handler: deleteUser},
-		},
+				{Method: http.MethodGet, Path: "/", Handler: list},
+				{Method: http.MethodPost, Path: "/register", Handler: register},
+				{Method: http.MethodPost, Path: "/login", Handler: login},
+				{Method: http.MethodDelete, Path: "/", Handler: deleteUser},
+			},
 		},
 	}
 }
