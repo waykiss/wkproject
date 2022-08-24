@@ -39,7 +39,7 @@ func (d *mockedDao) Find(v Query) (r []Model, err error) {
 }
 
 func (d *mockedDao) FindByEmail(email string) (r Model, err error) {
-	return d.DaoDatabase.FindByEmail(email)
+	return
 }
 
 func TestRegisterValid(t *testing.T) {
