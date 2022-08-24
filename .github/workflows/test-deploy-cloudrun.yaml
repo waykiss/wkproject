@@ -48,7 +48,7 @@ jobs:
       - name: Build backend
         shell: bash
         run: |
-          go get
+          go mod tidy
           env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o dist/linux/app main.go
       - name: Generating build artifacts to dist folder
         uses: actions/upload-artifact@v2
