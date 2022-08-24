@@ -22,17 +22,6 @@ jobs:
       - name: Checkout o repositorio atual
         uses: actions/checkout@v2
 
-      - name: Checkout goapp
-        uses: rodrigorodriguescosta/checkout@main
-        continue-on-error: true
-        with:
-          retry-max-attempts: 1
-          retry-min-seconds: 1
-          retry-max-seconds: 4
-          repository: rodrigorodriguescosta/goapp
-          ref: main
-          path: ../goapp
-
       # BACKEND
       - name: Install Go
         uses: actions/setup-go@v2
@@ -49,7 +38,7 @@ jobs:
         run: |
           cd backend
           go mod tidy
-          env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o dist/linux/app main.go
+          env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o ../dist/linux/app main.go
       - name: Generating build artifacts to dist folder
         uses: actions/upload-artifact@v2
         with:
