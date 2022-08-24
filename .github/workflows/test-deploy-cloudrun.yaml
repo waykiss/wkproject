@@ -23,15 +23,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Checkout goapp
-          uses: rodrigorodriguescosta/checkout@main
-          continue-on-error: true
-          with:
-            retry-max-attempts: 1
-            retry-min-seconds: 1
-            retry-max-seconds: 4
-            repository: rodrigorodriguescosta/goapp
-            ref: main
-            path: ../goapp
+        uses: rodrigorodriguescosta/checkout@main
+        continue-on-error: true
+        with:
+          retry-max-attempts: 1
+          retry-min-seconds: 1
+          retry-max-seconds: 4
+          repository: rodrigorodriguescosta/goapp
+          ref: main
+          path: ../goapp
 
       # BACKEND
       - name: Install Go
