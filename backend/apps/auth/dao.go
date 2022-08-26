@@ -2,7 +2,7 @@ package auth
 
 import (
 	"fmt"
-	"github.com/rodrigorodriguescosta/goapp/comps/database"
+	"github.com/waykiss/wkcomps/database"
 	"log"
 	"os"
 )

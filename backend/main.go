@@ -1,10 +1,10 @@
 package main
 
 import (
-	"crud-sample/apps/auth"
-	"github.com/rodrigorodriguescosta/goapp"
-	//"github.com/rodrigorodriguescosta/goapp/adapters/grpc"
-	"github.com/rodrigorodriguescosta/goapp/adapters/rest/fiber"
+	"github.com/waykiss/wkgo"
+	"github.com/waykiss/wkproject/apps/auth"
+	//"github.com/waykiss/wkgo/adapters/grpc"
+	"github.com/waykiss/wkgo/adapters/rest/fiber"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	restAdapter := fiber.New("8000")
 	restAdapter.Add(auth.App)
 
-	//goapp.AddAdapters(grpcAdapter, restAdapter)
-	goapp.AddAdapters(restAdapter)
-	goapp.Start("crud-sample")
+	//wkgo.AddAdapters(grpcAdapter, restAdapter)
+	wkgo.AddAdapters(restAdapter)
+	wkgo.Start("crud-sample")
 }

@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/rodrigorodriguescosta/goapp/comps/validation"
+	"github.com/waykiss/wkcomps/validation"
 	"golang.org/x/text/language"
 )
 

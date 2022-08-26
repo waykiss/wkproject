@@ -1,6 +1,6 @@
 package auth
 
-import "github.com/rodrigorodriguescosta/goapp/comps/str"
+import "github.com/waykiss/wkcomps/str"
 
 // inputParser perform some parsers over the model
 func inputParser(model *Model) {

@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/rodrigorodriguescosta/goapp/adapters/rest"
+	"github.com/waykiss/wkgo/adapters/rest"
 	"net/http"
 )
 
